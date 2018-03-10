@@ -12,4 +12,10 @@
         android:name="com.example.student.db2018031003.FragmentA"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
+
+    <fragment
+        android:id="@+id/fragmentb"
+        android:name="com.example.student.db2018031003.FragmentB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
