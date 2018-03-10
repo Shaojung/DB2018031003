@@ -3,10 +3,13 @@ package com.example.student.db2018031003;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 /**
@@ -65,6 +68,19 @@ public class FragmentB extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_b, container, false);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Button btn = getActivity().findViewById(R.id.button);
+        final TextView tv2 = getActivity().findViewById(R.id.textView2);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv2.setText("Hello World BBB");
+            }
+        });
     }
 
     // TODO: Rename method, update argument and hook method into UI event
